@@ -1,0 +1,15 @@
+name: ci
+on:
+  push: { branches: [ main, master ] }
+  pull_request: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v12
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+      - name: Flake checks
+        run: nix flake check --all-systems
+      - name: Build WSL host
+        run: nix build .#nixosConfigurations.wsl.config.system.build.toplevel
