@@ -10,7 +10,6 @@
   };
 
   programs.zsh.enable = true;
-  programs.starship.enable = true;
 
   home.packages = with pkgs; [
     tmux
