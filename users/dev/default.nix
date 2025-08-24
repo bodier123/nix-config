@@ -4,7 +4,7 @@
     isNormalUser = true;
     description = "dev";
     extraGroups = [ "wheel" "docker" "audio" "video" "input" ];
-    shell = pkgs.bashInteractive;
+    shell = pkgs.nushell;
   };
 
   # Passwordless sudo for wheel (adjust to taste)

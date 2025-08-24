@@ -22,4 +22,5 @@
   programs.direnv.nix-direnv.enable = true;
 
   home.stateVersion = "25.05";
+  programs.nushell.enable = true;
 }
