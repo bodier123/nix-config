@@ -36,7 +36,7 @@
     find = "fd";
   };
 
-  programs.nushell.extraConfig = 
+  programs.nushell.extraConfig = ''
     $env.STARSHIP_SHELL = "nu"
     $env.PROMPT_COMMAND = {|| starship prompt }
     $env.PROMPT_COMMAND_RIGHT = {|| "" }
@@ -51,7 +51,7 @@
       completion: { algorithm: "fuzzy", case_sensitive: false, use_ls_colors: true }
       cursor_shape: { vi_insert: "line", vi_normal: "block" }
     }
-  ;
+  '';
 
   home.stateVersion = "25.05";
 }
