@@ -3,6 +3,10 @@
   home.username = "dev";
   home.homeDirectory = "/home/dev";
 
+  home.packages = with pkgs; [
+    helix
+  ];
+
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.nushell.enable = true;
