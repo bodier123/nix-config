@@ -3,26 +3,11 @@
   home.username = "dev";
   home.homeDirectory = "/home/dev";
 
-  programs.git = {
-    enable = true;
-    userName = "dev";
-    userEmail = "dev@example.com";
-  };
-
+  programs.git.enable = true;
   programs.zsh.enable = true;
 
-  home.packages = with pkgs; [
-    tmux
-    neovim
-    tree
-  ];
-
-  programs.direnv.enable = true;
-  programs.direnv.nix-direnv.enable = true;
-
-  home.stateVersion = "25.05";
   programs.nushell.enable = true;
-  # --- NU_PROMPT_BLOCK: pretty Nushell prompt + UX --------------------------------
+
   programs.starship = {
     enable = true;
     settings = {
@@ -68,5 +53,6 @@
       cursor_shape: { vi_insert: "line", vi_normal: "block" }
     }
   ;
-  # ------------------------------------------------------------------------------- 
+
+  home.stateVersion = "25.05";
 }
