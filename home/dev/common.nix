@@ -7,7 +7,6 @@
   programs.zsh.enable = true;
   programs.nushell.enable = true;
 
-  # A clean Starship prompt
   programs.starship = {
     enable = true;
     settings = {
@@ -22,14 +21,12 @@
     };
   };
 
-  # Useful CLI tools with Nushell integration
   programs.zoxide = { enable = true; enableNushellIntegration = true; };
   programs.eza     = { enable = true; enableNushellIntegration = true; };
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.carapace = { enable = true; enableNushellIntegration = true; };
 
-  # Aliases for the new tools
   programs.nushell.shellAliases = {
     ls = "eza --group-directories-first";
     ll = "eza -lah --group-directories-first";
@@ -39,7 +36,6 @@
     find = "fd";
   };
 
-  # Nushell-specific settings
   programs.nushell.extraConfig = 
     $env.STARSHIP_SHELL = "nu"
     $env.PROMPT_COMMAND = {|| starship prompt }
