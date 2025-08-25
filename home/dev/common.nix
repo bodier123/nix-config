@@ -13,10 +13,10 @@
       add_newline = true;
       format = "$directory$git_branch$git_status$cmd_duration$nix_shell$line_break$character";
       character = { success_symbol = "❯"; error_symbol = "❯"; vicmd_symbol = "❮"; };
-      cmd_duration = { min_time = 2000; format = " [$duration] "; };
+      cmd_duration = { min_time = 2000; format = " ($duration) "; };
       directory = { truncation_length = 3; truncation_symbol = "…/"; style = "bold cyan"; };
-      git_branch = { format = '' [\[$branch\]] ''; truncation_length = 32; truncation_symbol = "…/"; };
-      git_status = { format = '' [\[$all_status$ahead_behind\]] ''; };
+      git_branch = { format = " ($branch) "; truncation_length = 32; truncation_symbol = "…/"; };
+      git_status = { format = " ($all_status$ahead_behind) "; };
       nix_shell = { format = " in [$state]($style)"; heuristic = true; style = "bold purple"; };
     };
   };
