@@ -32,7 +32,6 @@
   programs.carapace = { enable = true; enableNushellIntegration = true; };
 
   programs.nushell.shellAliases = {
-    ls = "eza --group-directories-first";
     ll = "eza -lah --group-directories-first";
     la = "eza -la";
     cat = "bat";
