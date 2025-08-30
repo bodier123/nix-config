@@ -7,10 +7,16 @@
     helix
   ];
 
-  programs.git.enable = true;
+
   programs.zsh.enable = true;
   programs.nushell.enable = true;
 
+  programs.git = {
+    enable = true;
+    userName = "bodier123";
+    userEmail = "bodier123@users.noreply.github.com";
+  };
+    
   programs.starship = {
     enable = true;
     settings = {
