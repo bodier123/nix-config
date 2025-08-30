@@ -10,6 +10,7 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.nushell.enable = true;
+  programs.eza.enable = true;
 
   programs.starship = {
     enable = true;
