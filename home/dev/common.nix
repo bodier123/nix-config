@@ -52,7 +52,6 @@
       show_banner: false
       edit_mode: "vi"
       render_right_prompt_on_last_line: true
-      completion: { algorithm: "fuzzy", case_sensitive: false, use_ls_colors: true }
       cursor_shape: { vi_insert: "line", vi_normal: "block" }
     }
   '';
