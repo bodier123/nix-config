@@ -26,7 +26,7 @@
   };
 
   programs.zoxide = { enable = true; enableNushellIntegration = true; };
-  programs.eza     = { enable = true; enableNushellIntegration = true; };
+  programs.eza     = { enable = true; enableNushellIntegration = false; };
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.carapace = { enable = true; enableNushellIntegration = true; };
